@@ -1,0 +1,11 @@
+<h1>There are {{ count }} words in your string.</h1>
+<hr><a href="{% url 'homepage' %}">Go back and start again.</a>
+<h1>The original text is:</h1>
+{{ fulltext }}
+<hr>
+<h1>Occurances</h1>
+<hr>
+
+{% for word, wordCount in worddictionary %}
+<strong>{{ word }}</strong>: {{wordCount}}<br>
+{% endfor %}
